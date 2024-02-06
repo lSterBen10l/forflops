@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Forstørre Tekst</title>
+    </head>
+    <body>
+        <input type="text" id="userText" placeholder="Skriv inn tekst her">
+        <select id="headingSize">
+            <option value="1">H1</option>
+            <option value="2">H2</option>
+            <option value="3">H3</option>
+            <option value="4">H4</option>
+            <option value="5">H5</option>
+            <option value="6">H6</option>
+        </select>
+        <button onclick="applySize()">Forstørr Tekst</button>
+        <div id="output"></div>
+    
+        <script>
+            function applySize() {
+                var text = document.getElementById("userText").value;
+                var size = document.getElementById("headingSize").value;
+                var output = `<h${size}>${text}</h${size}>`;
+                document.getElementById("output").innerHTML = output;
+            }
+        </script>
+    </body>
+    </html>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
